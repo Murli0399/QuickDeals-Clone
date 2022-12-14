@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/style.css">
+    <script src="https://kit.fontawesome.com/ff751ea986.js" crossorigin="anonymous"></script>
+
+    <title>Quick Deals</title>
+    <link rel="shortcut icon" href="logo/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- here is navbar -->
+    <nav id="navbar">
+        <div class="logo">
+            <h1>
+                <a href="index.html"><img src="logo/logoname.png" alt=""></a>
+            </h1>
+        </div>
+        <div class="navdiv">
+            <div class="icondiv">
+                <span>Save $3 with App</span>
+                <span>Support Center</span>
+                <div><span>Ship to</span><img src="https://uidesign.gbtcdn.com/GB/app/2018/flag_png/us.png"
+                        alt="">/<span>USD</span></div>
+                <span>Language</span>
+                <span>Country Website</span>
+            </div>
+            <div class="cartsign">
+                <div class="forsearch">
+                    <input type="text" id="bordery" />
+                </div>
+                <div class="usericons">
+                    <a href="#"><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAtFBMVEUAAAAAAAAAAAAAAAAAAAABAQEAAAAAAAAAAAAAAAAAAADg4OAAAAACAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg4OAAAAAAAAAAAAAAAADf398AAAAAAAAAAADR0dEAAABISEipqakmJiYAAAAoKCgAAAAAAAAAAAA1NTXMzMwAAAAAAADf399WVlYAAAAAAACsrKzf398AAAAAAAAAAAAAAADg4ODR0dHe3t4ReYomAAAAOHRSTlMAQPzFDvXsrm47E/C+tKl/9+dnGQXx8NuvioN5VVBKRTQQBvrz7d3Z18u4t7SjlYBfX11NMDAfCv0TF7MAAADjSURBVCjPpZDXcsJADEXX29wbEHoCIT30fg3//1941svA2h5eOE+aOdJIuuRJ9iyB/O/zqhlQKFKrbByAuZy7DNQ1DReIiipCyktD7W3Xz7o74r3AMZSN0M9y/HcSwjYUwzRTvJIemKFC/BRqWZmKIU7FVL6rYahDgo+z2hWhXfq6AXx9nmYrBqwrP+s0qEPKeHFKc/H7VhGLBJq/oWEsCaDTi+O+LYCgeTNjATrXqR4HFB3valrfkONboysR3B0+IneMgOsxgeoywo50JbAx1RBSr0INLaWadaq4f2LVMCGPuACORSZPQ0RWdgAAAABJRU5ErkJggg=="
+                            alt="">
+                        <span>Sign In</span></a>
+
+                    <a href="#"><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAA81BMVEUAAAAAAAAAAAAAAAAAAAABAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADGxsYTExMAAAAAAADg4OAAAADf39/g4OAAAAAAAAAAAADg4OAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADh4eEAAADi4uIAAADt7e3d3d1iYmLf39+RkZEAAADg4OAAAAArKyvf398QEBCoqKglJSXg4OAXFxfg4OAKCgohISHf39/f398dHR3f398AAADHx8cAAAAAAABSUlIvLy8AAAAAAAD////g4OAAAACSkpLV1dW0tLSHh4dycnJUVFRDQ0NMKKmhAAAASHRSTlMA+vTB+ZAoIAwF/NummWpAM/z89vHw5OHc0Me7mIuHc3BmU0tHPjwiFA37+/r47Ovr5drTz8C0s62to6GIgoB3ZF1WThsZEwOBbnz7AAAA+klEQVQoz73Q1W7DQBRF0WPm2GFsOCkzM7c+5f//msa3ELvtW6Wsh5krbc2MNJg5y9BUakNgqFHVDGta+kUK36coDr7KwGXTRNQmWeo6d1cN6iHEgsquDJdUIhkMbtgytOnjQ6f3OdTZkd3j+L5VjbdGGB2Uq8eLAHpsJMUh7b04cSJrbdJMluQp8iJOawEWVTmlcCeT1oGQdSQ0LscZ8wg4JylHN59NJpVbSY7Ht3Qpo5kcEqbCl1Q6C1ixJciVfPguNYNrqf89nLaVI6oRUvbJZylLu1RCZJy6fH2M4/w29T5+uC6w8LSqszLGLzebnAhs/OXc03P4r3d0M0A98TPbIwAAAABJRU5ErkJggg=="
+                            alt="">
+                        <span>Favorites</span></a>
+
+                    <a href="#"><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAn1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqJAAUEQD/2QAAAABJPgAAAAAAAAAAAAD/2gD/2gAAAAAAAAD/2gAAAAAAAAAAAAD/2QAAAAAAAAD/2wAAAAAAAAD/2QAAAAD/4wAAAAD/2gD51ADQsQCiigB0YwBGOwCQauaIAAAALnRSTlMA09hV4UL48rFIE/zazLuVfXZJIR39++3r5+fk29TJqKakm46JgG9lW1pNNjISfz/FPQAAALRJREFUKM+dz1cKwzAQRdHn7vRip/feX+r+1xaDLDx2Igi5XyMODCP8mcWkvpkYwVDIg4mabBhkxs9qinx+qZxe0ka+Mn01zNkq0JmWvmJwFU0Ah6GiIzuSekCLa0UReRM0BRrcQRXwLmgB1OmlVOND0AaoMk5pyaegPVCpIG3Ll6ATYtqaPHYFXZJ3mH2+2Aq6ekF8D79UGrklPTu27Qgakq6ex6QlyBVk56kdBNnCqlpo7g1Gxypv685O3AAAAABJRU5ErkJggg=="
+                            alt="">
+                        <span>Cart</span></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- here is a banner container -->
+    <div class="banner-container">
+        <div class="threeTab">
+            <ul>
+                <li><a href="#">Category</a></li>
+                <li><a href="#">SUPER DEALS</a></li>
+                <li><a href="#">APP ONLY</a></li>
+                <li><a href="#">NEW ARRIVALS</a></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <div id="slideshow"></div>
+    </div>
+    <!-- /////////////////////////////////////////////////// -->
+
+    <div class="secondPart">
+        <div><img src="https://uidesign.gbtcdn.com/GB/image/6874/230x120b_en.jpg" alt=""></div>
+        <div><img src="https://uidesign.gbtcdn.com/GB/image/8823/ortur_master3_230%C3%97120_en.jpg" alt=""></div>
+        <div><img src="https://uidesign.gbtcdn.com/GB/image/7257/230_120_en.jpg" alt=""></div>
+        <div><img src="https://uidesign.gbtcdn.com/GB/image/6874/230x120b_en.jpg" alt=""></div>
+        <div><img src="https://uidesign.gbtcdn.com/GB/image/6080/230x120.jpg?imbypass=true" alt=""></div>
+    </div>
+    <!-- /////////////////////////////////////////////////////////// -->
+
+    <div class="collection">
+        <h2>
+            <i class="fas fa-shopping-bag"></i>
+            <span>COLLECTION</span>
+        </h2>
+        <div class="flexcollection">
+            <div>
+                <img src="https://gloimg.gbtcdn.com/soa/gb/item/6870745450383863808/16675/goods_thumb_220-v1/3b1b15f9a173.jpg"
+                    alt="">
+                <h4>Nimble Tech Store</h4>
+                <p>$259</p>
+            </div>
+            <div>
+                <img src="https://gloimg.gbtcdn.com/soa/gb/item/6862458881155723264/16456/goods_thumb_220-v3/67f17c7e8795.jpg"
+                    alt="">
+                <h4>Ortur Official Store</h4>
+                <p>$319</p>
+            </div>
+            <div>
+                <img src="https://gloimg.gbtcdn.com/soa/gb/item/6507287161137004544/16384/goods_thumb_220-v1/c29e4f319b14.jpg"
+                    alt="">
+                <h4>Asseo Go Store</h4>
+                <p>$10.99</p>
+            </div>
+            <div>
+                <img src="https://gloimg.gbtcdn.com/soa/gb/store/6878025592978206720/16585/goods_thumb_220-v1/70f4656ec542.jpg"
+                    alt="">
+                <h4>Eight Hour Store</h4>
+                <p>$10.99</p>
+            </div>
+            <div>
+                <img src="https://gloimg.gbtcdn.com/soa/gb/item/6870745450383863808/16643/goods_thumb_220-v1/d7a90e41e9e6.jpg"
+                    alt="">
+                <h4>Clearance Sale</h4>
+                <p>$9.90</p>
+            </div>
+            <div>
+                <img src="https://gloimg.gbtcdn.com/soa/gb/item/6862458881155723264/16456/goods_thumb_220-v3/67f17c7e8795.jpg"
+                    alt="">
+                <h4>Ortur Official Store</h4>
+                <p>$319</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- /////////////////////////////////////////////////////////////////// -->
+
+    <div class="collection">
+        <h2>
+            <i class="fas fa-shopping-bag"></i>
+            <span>SUPER DEALS</span>
+        </h2>
+        <div class="superDeals">
+            <div>
+                <img src="https://gloimg.gbtcdn.com/soa/gb/item/6870745450383863808/16486/goods_thumb_220-v2/d68f68d9b088.jpg"
+                    alt="">
+                <p><a href="#">KINGROON KP3S 3D Printer High Precision Printing Upgraded DIY FDM 3d printer Kit Touch
+                        Screen KP3S Printing Size 180x180x180mm - EU</a></p>
+
+                <h4>RRP:<del> $339.00</del></h4>
+                <h3>$168.00</h3>
+            </div>
+            <div>
+                <img src="https://gloimg.gbtcdn.com/soa/gb/item/6883820374342168576/16528/goods_img_big-v1/c42f180e872c.jpg"
+                    alt="">
+                <p><a href="#">Lenovo BH2 Wireless Headphones Business Headset Sport Handsfree with Mic Rechargeable
+                        Standby Car Driving Bluetooth Earphones - Black</a></p>
+                <h4>RRP:<del>$59.00</del></h4>
+                <h3>$29.40</h3>
+            </div>
+            <div>
+                <img src="https://gloimg.gbtcdn.com/soa/gb/item/6882688590640508928/16427/goods_img_big-v1/9ee0aa659dae.jpg"
+                    alt="">
+                <p><a href="#">iMosi T1S Smart Watch Band With Temperature Measure ECG Heart Rate Blood Pressure Monitor
+                        Weather Forecast Drinking Remind - Black</a></p>
+                <h4>RRP:<del>$27.00</del></h4>
+                <h3>$19.99 </h3>
+            </div>
+            <div>
+                <img src="https://gloimg.gbtcdn.com/soa/gb/item/6882688590640508928/16448/goods_img_big-v3/6f9c892c7ec6.jpg"
+                    alt="">
+                <p><a href="#">5in1 CO2 Meter Digital Temperature Humidity Tester Carbon Dioxide TVOC HCHO Detector Air
+                        Quality Monitor co2 sensor Monitor - White</a></p>
+                <h4>RRP:<del> $42.00</del></h4>
+                <h3>$29.50</h3>
+            </div>
+            <div>
+                <img src="https://gloimg.gbtcdn.com/soa/gb/item/6882688590640508928/16445/goods_thumb_220-v1/af8dc4077d50.jpg"
+                    alt="">
+                <p><a href="#">New Smart Watch Men Full Touch Screen Sport Fitness Watch IP67 Waterproof Bluetooth For
+                        Android ios smartwatch Men+box - Black</a></p>
+                <h4>RRP:<del>$39.00</del></h4>
+                <h3>$25.99</h3>
+            </div>
+            <div>
+                <img src="https://gloimg.gbtcdn.com/soa/gb/item/6880475736935952384/16656/goods_thumb_220-v5/baea2e7628f1.jpg"
+                    alt="">
+                <p><a href="#">XIAOMI SWDK Smart Mopping Robot ZDG300S With WIFI APP - Germany</a></p>
+                <h4>RRP:<del> $399.00</del></h4>
+                <h3>$209.00</h3>
+            </div>
+        </div>
+
+    </div>
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <div class="collection">
+        <h2>
+            <i class="fas fa-shopping-bag"></i>
+            <span>NEW</span>
+        </h2>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="slideimg">
+                    <img src="https://uidesign.gbtcdn.com/GB/image/8823/Alfwise.jpg" alt="">
+                    <div class="innerslidediv">
+                        <h3>NEW ARRIVAL</h3>
+                        <p>Alfawise Laser Engraver</p>
+                    </div>
+                </div>
+                <div class="slideitem">
+                    <div class="innerslideitem">
+                        <a href="#"><img
+                                src="https://gloimg.gbtcdn.com/soa/gb/item/6866325577285169152/16704/goods_img_big-v1/9ecf979beb62.jpg"
+                                alt=""></a>
+                        <h4>RRP:<del> $8.65</del></h4>
+                        <h3>$6.06</h3>
+                    </div>
+                    <div class="innerslideitem">
+                        <a href="#"><img
+                                src="https://gloimg.gbtcdn.com/soa/gb/item/6866325577285169152/16703/goods_img_big-v1/58224f249724.jpg"
+                                alt=""></a>
+                        <h4>RRP:<del> $5.13</del></h4>
+                        <h3>$2.82</h3>
+                    </div>
+                    <div class="innerslideitem">
+                        <a href="#"><img
+                                src="https://gloimg.gbtcdn.com/soa/gb/item/6866325577285169152/16704/goods_thumb_220-v1/ff1d37e606d3.jpg"
+                                alt=""></a>
+                        <h4>RRP:<del> $8.86</del></h4>
+                        <h3>$7.97</h3>
+                    </div>
+                    <div class="innerslideitem">
+                        <a href="#"><img
+                                src="https://gloimg.gbtcdn.com/soa/gb/item/6870745450383863808/16675/goods_img_big-v1/e93e97cf8445.jpg"
+                                alt=""></a>
+                        <h4>RRP:<del> $399.00</del></h4>
+                        <h3>$299.00 </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="slideimg">
+                    <img src="https://uidesign.gbtcdn.com/GB/image/8823/KYVOL+D3.jpg" alt="">
+                    <div class="innerslidediv">
+                        <h3>NEW ARRIVAL</h3>
+                        <p>KYVOL D3 ROBOT</p>
+                    </div>
+                </div>
+                <div class="slideitem">
+                    <div class="innerslideitem">
+                        <a href="#"><img
+                                src="https://gloimg.gbtcdn.com/soa/gb/item/6870745450383863808/16665/goods_img_big-v1/0b5e3bf60930.jpg"
+                                alt=""></a>
+                        <h4>RRP:<del>$549.00</del></h4>
+                        <h3>$359.00</h3>
+                    </div>
+                    <div class="innerslideitem">
+                        <a href="#"><img
+                                src="https://gloimg.gbtcdn.com/soa/gb/item/6870745450383863808/16661/goods_img_big-v1/be4c02a13483.jpg"
+                                alt=""></a>
+                        <h4>RRP:<del> $79.00</del></h4>
+                        <h3>$49.00</h3>
+                    </div>
+                    <div class="innerslideitem">
+                        <a href="#"><img
+                                src="https://gloimg.gbtcdn.com/soa/gb/item/6866325577285169152/16704/goods_img_big-v1/7ea863a6ccd0.jpg"
+                                alt=""></a>
+                        <h4>RRP:<del>$8.36</del></h4>
+                        <h3>$5.43 </h3>
+                    </div>
+                    <div class="innerslideitem">
+                        <a href="#"><img
+                                src="https://gloimg.gbtcdn.com/soa/gb/item/6899301501118902272/16672/goods_img_big-v2/71e9f3e723e6.jpg"
+                                alt=""></a>
+                        <h4>RRP:<del>$19.99</del></h4>
+                        <h3> $11.99</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="slideimg">
+                    <img src="https://uidesign.gbtcdn.com/GB/image/8823/DOOGEE+T10.jpg" alt="">
+                    <div class="innerslidediv">
+                        <h3>NEW ARRIVAL</h3>
+                        <p>DOOGEE T10 Tablet</p>
+                    </div>
+                </div>
+                <div class="slideitem">
+                    <div class="innerslideitem">
+                        <a href="#"><img
+                                src="https://gloimg.gbtcdn.com/soa/gb/item/6870745450383863808/16673/goods_img_big-v1/cf1c5e2729a8.jpg"
+                                alt=""></a>
+                        <h4>RRP:<del>$99.00</del></h4>
+                        <h3>$58.00</h3>
+                    </div>
+                    <div class="innerslideitem">
+                        <a href="#"><img
+                                src="https://gloimg.gbtcdn.com/soa/gb/item/6901174613791928320/16678/goods_img_big-v1/8e6069449a8e.jpg"
+                                alt=""></a>
+                        <h4>RRP:<del>$29.99</del></h4>
+                        <h3>$21.99</h3>
+                    </div>
+                    <div class="innerslideitem">
+                        <a href="#"><img
+                                src="https://gloimg.gbtcdn.com/soa/gb/store/6878025592978206720/16673/goods_img_big-v3/0aa99fb976bc.jpg"
+                                alt=""></a>
+                        <h4>RRP:<del>$84.69</del></h4>
+                        <h3>$71.99</h3>
+                    </div>
+                    <div class="innerslideitem">
+                        <a href="#"><img
+                                src="https://gloimg.gbtcdn.com/soa/gb/store/6615272824267153408/16679/goods_img_big-v2/87c32a5a7fae.jpg"
+                                alt=""></a>
+                        <h4>RRP:<del>$55.23</del></h4>
+                        <h3>$48.60</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "";
+        }
+    </script>
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <div class="collection">
+        <h2>
+            <i class="fas fa-shopping-bag"></i>
+            <span>RECOMMENDED FOR YOU</span>
+        </h2>
+    </div>
+    <div id="container"></div>
+    <!-- <a href="cart.html">cart</a> -->
+</body>
+
+</html>
+
+<script src="Scripts/index.js"></script>
