@@ -1,5 +1,9 @@
-let productDetail = JSON.parse(localStorage.getItem("productDetail"));
+let productDetail = JSON.parse(localStorage.getItem("productDetail")) || [];
 let container = document.getElementById("container");
+let userName = JSON.parse(localStorage.getItem("userName"));
+let matData = JSON.parse(localStorage.getItem(userName[0].uname)) || [];
+
+
 function showData(data) {
     data.forEach((element, index) => {
         let imgdiv = document.createElement("div");
@@ -56,6 +60,23 @@ function showData(data) {
         addTocart.setAttribute("id", "addTocart");
         addTocart.innerText = "Add to Cart";
 
+        addTocart.addEventListener("click", () => {
+            if (userName == null) {
+                alert("Please Sign In First");
+            }
+            else {
+                if (userName.length > 0) {
+                    matData.push({...element,quantity:1});
+                    localStorage.setItem(`${userName[0].uname}`, JSON.stringify(matData));
+                    location.href = "cart.html";
+                }
+                else {
+                    alert("Something is Wrong");
+                }
+            }
+        })
+
+
         let buyNow = document.createElement("button");
         buyNow.setAttribute("id", "buyNow");
         buyNow.innerText = "Buy Now";
@@ -66,32 +87,41 @@ function showData(data) {
         firstlinediv.setAttribute("class", "firstlinediv");
 
         let img1 = document.createElement("img");
-        img1.setAttribute("src","https://css.gbtcdn.com/imagecache/gbw/img/site/paypal@.png");
+        img1.setAttribute("src", "https://css.gbtcdn.com/imagecache/gbw/img/site/paypal@.png");
         let img2 = document.createElement("img");
-        img2.setAttribute("src","https://uidesign.gbtcdn.com/GB/images/others/GB_brandpic/mm/VISA.png?imbypass=true");
+        img2.setAttribute("src", "https://uidesign.gbtcdn.com/GB/images/others/GB_brandpic/mm/VISA.png?imbypass=true");
         let img3 = document.createElement("img");
-        img3.setAttribute("src","https://uidesign.gbtcdn.com/GB/images/others/GB_brandpic/mm/mc_vrt_opt_pos_73_2x.png?imbypass=true");
-        firstlinediv.append(img1,img2,img3);
+        img3.setAttribute("src", "https://uidesign.gbtcdn.com/GB/images/others/GB_brandpic/mm/mc_vrt_opt_pos_73_2x.png?imbypass=true");
+        firstlinediv.append(img1, img2, img3);
 
         let secondlinediv = document.createElement("div");
         secondlinediv.setAttribute("class", "secondlinediv");
         let supportsys1 = document.createElement("p");
         supportsys1.innerText = "Tax Info";
-        supportsys1.addEventListener("click",() => {
-            document.getElementById("supportsys1").style.display="block";
+        supportsys1.addEventListener("click", () => {
+            document.getElementById("supportsys1").style.display = "block";
         })
         let supportsys2 = document.createElement("p");
         supportsys2.innerText = "Price Protection";
+        supportsys2.addEventListener("click", () => {
+            document.getElementById("supportsys2").style.display = "block";
+        })
         let supportsys3 = document.createElement("p");
         supportsys3.innerText = "Price Disclaimer";
+        supportsys3.addEventListener("click", () => {
+            document.getElementById("supportsys3").style.display = "block";
+        })
         let supportsys4 = document.createElement("p");
         supportsys4.innerText = "Report Item";
+        supportsys4.addEventListener("click", () => {
+            document.getElementById("supportsys4").style.display = "block";
+        })
 
-        secondlinediv.append(supportsys1,supportsys2,supportsys3,supportsys4);
+        secondlinediv.append(supportsys1, supportsys2, supportsys3, supportsys4);
 
-        linediv.append(firstlinediv,secondlinediv);
+        linediv.append(firstlinediv, secondlinediv);
 
-        descdiv.append(detaildiv, flashSale, pricediv, shipdiv, qutdiv, addTocart, buyNow,linediv)
+        descdiv.append(detaildiv, flashSale, pricediv, shipdiv, qutdiv, addTocart, buyNow, linediv)
         imgdiv.append(image);
         container.append(imgdiv, descdiv);
     });

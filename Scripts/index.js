@@ -30,7 +30,7 @@ let promise = fetch("./Scripts/apiData.json")
 })
 
 let cont = document.getElementById("container");
-let productDetail = JSON.parse(localStorage.getItem("productDetail"));
+let productDetail = JSON.parse(localStorage.getItem("productDetail"))||[];
 // console.log(productDetail.length)
 if(productDetail.length != 0){
     productDetail.splice(0,productDetail.length);

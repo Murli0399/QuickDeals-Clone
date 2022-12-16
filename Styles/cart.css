@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+.cart_page {
+    width: 100%;
+    margin: auto;
+    padding: 38px 0 40px;
+    background: #f2f2f2;
+    line-height: 1;
+}
+
+.table_head {
+    border: 1px solid #eee;
+    background: #fff;
+    box-sizing: border-box;
+    width: 85%;
+    margin: auto;
+    font-size: 0;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.table_head .rewHead {
+    line-height: 50px;
+    font-size: 14px;
+    color: #999;
+
+}
+
+.carttable {
+    border: 1px solid #eee;
+    background: #fff;
+    box-sizing: border-box;
+    width: 85%;
+    margin: 20px auto;
+    padding: 10px 20px;
+    line-height: 18px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.head-1 {
+    width: 45%;
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-between;
+    
+}
+
+.head-2,
+.head-3,
+.head-4,
+.head-5 {
+    width: 10%;
+    display: inline-grid;
+    align-items: center;
+    text-align: center;
+}
+
+
+.head-1 .imagediv {
+    width: 30%;
+
+}
+
+.head-1 .imagediv img {
+    width: 100%;
+}
+
+.detaildiv {
+    width: 60%;
+    position: relative;
+    white-space: nowrap;
+}
+
+.detaildiv h3 {
+    color: #000;
+    max-width: 311px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    margin: 10px 0;
+    vertical-align: middle;
+}
+
+.detaildiv p {
+    line-height: 20px;
+    font-size: 13px;
+    color: #999;
+}
+
+.detaildiv .catp {
+    line-height: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.qutdiv {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.qutdiv button {
+    width: 35px;
+    background-color: #fff;
+    line-height: 28px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 24px;
+    border: 1px solid #ccc;
+}
+
+.qutdiv button:hover {
+    color: orangered;
+}
+
+.qutdiv h4 {
+    width: 40px;
+    background-color: #fff;
+    line-height: 28px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #ccc;
+}
