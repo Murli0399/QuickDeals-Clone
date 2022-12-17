@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+#container {
+    width: 90%;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    padding: 20px;
+    /* border: 1px solid red; */
+}
+
+#container .imgdiv {
+    width: 35%;
+    /* border: 1px solid black; */
+}
+
+#container .imgdiv img {
+    width: 100%;
+}
+
+#container .descdiv {
+    width: 60%;
+    /* border: 1px solid black; */
+}
+
+#container .descdiv .detaildiv {
+    /* border: 1px solid green; */
+    padding: 10px;
+    width: 80%;
+    font-size: 18px;
+    color: #000;
+    font-weight: 600;
+}
+
+#container .descdiv .pricediv,
+.shipdiv {
+    margin: 15px 0;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 10px;
+}
+
+#container .descdiv .pricediv p {
+    display: inline-block;
+    padding: 0 10px;
+    width: 80px;
+    color: #666;
+    font-size: 14px;
+}
+
+#container .descdiv .pricediv h3 {
+    width: 20%;
+    display: inline-block;
+    color: #f30240;
+    font-size: 30px;
+    line-height: .8;
+    font-weight: 700;
+}
+
+#container .descdiv .pricediv h5 {
+
+    padding: 0 6px;
+    height: 20px;
+    line-height: 20px;
+    background-color: #f30240;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+#container .descdiv .flashSale {
+    background-color: #f30240;
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    vertical-align: middle;
+    color: #fff;
+}
+
+#container .descdiv .flashSale strong {
+    line-height: 50px;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 700;
+    margin: 0 15px;
+}
+
+#container .descdiv .shipdiv p {
+    display: inline-block;
+    padding: 0 10px;
+    width: 80px;
+    color: #666;
+    font-size: 14px;
+}
+
+#container .descdiv .shipdiv h4 {
+    display: inline-block;
+    padding: 0 10px;
+    color: #666;
+    width: 60%;
+    font-size: 14px;
+}
+
+#container .descdiv .qutdiv {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+#container .descdiv .qutdiv button {
+    width: 35px;
+    background-color: #fff;
+    line-height: 28px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 24px;
+    border: 1px solid #ccc;
+}
+
+
+#container .descdiv .qutdiv h4 {
+    display: inline-block;
+    padding: 0 10px;
+    color: #666;
+    width: 60%;
+    font-size: 15px;
+}
+
+#container .descdiv .qutdiv p {
+    display: inline-block;
+    padding: 0 10px;
+    width: 80px;
+    color: #666;
+    font-size: 14px;
+}
+
+#container .descdiv #addTocart {
+    margin: 20px 10px 20px 20px;
+    padding: 0 30px;
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    background: #f30240;
+    border-color: #f30240;
+    font-weight: 700;
+}
+#container .descdiv #addTocart:hover{
+    background-color: #e10139;
+    cursor: pointer;
+}
+
+#container .descdiv #buyNow {
+    margin: 20px 10px 20px 10px;
+    padding: 0 30px;
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 50px;
+    line-height: 50px;
+    background-color: #ffeff2;
+    border: 2px solid #f30240;
+    color: #f30240;
+    font-weight: 700;
+}
+#container .descdiv #buyNow:hover{
+    background-color: #e7d9db;
+    cursor: pointer;
+}
+#container .descdiv .linediv{
+    width: 100%;
+    /* height: 40px; */
+    display: flex;
+    margin-top: 20px;
+}
+#container .descdiv .linediv .firstlinediv{
+    width: 41%;
+    /* border: 1px solid red; */
+    display: inline-block;
+    height: 36px;
+}
+#container .descdiv .linediv .firstlinediv img{
+    margin-right: 10px;
+    padding: 0 5px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #eee;
+    text-align: center;
+    cursor: auto;
+}
+#container .descdiv .linediv .secondlinediv{
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#container .descdiv .linediv .secondlinediv p{
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+}
+#container .descdiv .linediv .secondlinediv p:hover{
+    color: orangered;
+}
+/* ////////////////////////////////////////////////////////////////// */
+
+ .modelsupport{
+    width: 25%;
+    margin: auto; 
+    padding: 30px;
+    line-height: 21px;
+    word-break: break-word;
+    position: absolute; 
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #fff;
+    text-align: center;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    display: none;
+}
+.modelsupport h3{
+    margin: 0;
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+}
+.modelsupport p{
+    padding: 20px 0 30px 0;
+    line-height: 1.5;
+    font-size: 14px;
+    color: #000;
+}
+.modelsupport button{
+    background: #ffda00;
+    font-weight: 700;
+    height: 40px;
+    padding: 0 30px;
+    line-height: 40px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: none;
+    text-align: center;
+    color: #000;
+    cursor: pointer;
+    outline: none;
+}
