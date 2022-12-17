@@ -36,18 +36,28 @@
                     <input type="text" id="bordery" />
                 </div>
                 <div class="usericons">
-                    <div class="popup">
+                    <div class="popup" id="ifUserOut">
                         <a href="#"><img
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAtFBMVEUAAAAAAAAAAAAAAAAAAAABAQEAAAAAAAAAAAAAAAAAAADg4OAAAAACAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg4OAAAAAAAAAAAAAAAADf398AAAAAAAAAAADR0dEAAABISEipqakmJiYAAAAoKCgAAAAAAAAAAAA1NTXMzMwAAAAAAADf399WVlYAAAAAAACsrKzf398AAAAAAAAAAAAAAADg4ODR0dHe3t4ReYomAAAAOHRSTlMAQPzFDvXsrm47E/C+tKl/9+dnGQXx8NuvioN5VVBKRTQQBvrz7d3Z18u4t7SjlYBfX11NMDAfCv0TF7MAAADjSURBVCjPpZDXcsJADEXX29wbEHoCIT30fg3//1941svA2h5eOE+aOdJIuuRJ9iyB/O/zqhlQKFKrbByAuZy7DNQ1DReIiipCyktD7W3Xz7o74r3AMZSN0M9y/HcSwjYUwzRTvJIemKFC/BRqWZmKIU7FVL6rYahDgo+z2hWhXfq6AXx9nmYrBqwrP+s0qEPKeHFKc/H7VhGLBJq/oWEsCaDTi+O+LYCgeTNjATrXqR4HFB3valrfkONboysR3B0+IneMgOsxgeoywo50JbAx1RBSr0INLaWadaq4f2LVMCGPuACORSZPQ0RWdgAAAABJRU5ErkJggg=="
                                 alt="">
                             <span>Sign In</span></a>
-                            <div class="boxpopup">
-                                <p>Welcome to Quick Deals</p>
-                                <button id="login">Sign In</button>
-                                <hr>
-                                <p>Register on Quick Deals: Earn 10 Points</p>
-                                <button id="register">Register</button>
-                            </div>
+                        <div class="boxpopup">
+                            <p>Welcome to Quick Deals</p>
+                            <button id="login" class="logincss" onclick="location.href='login.html'">Sign In</button>
+                            <hr>
+                            <p>Register on Quick Deals: Earn 10 Points</p>
+                            <button id="register" onclick="location.href='register.html'">Register</button>
+                        </div>
+                    </div>
+                    <div class="popup" id="ifUserIn">
+                        <a href="#"><img
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAtFBMVEUAAAAAAAAAAAAAAAAAAAABAQEAAAAAAAAAAAAAAAAAAADg4OAAAAACAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg4OAAAAAAAAAAAAAAAADf398AAAAAAAAAAADR0dEAAABISEipqakmJiYAAAAoKCgAAAAAAAAAAAA1NTXMzMwAAAAAAADf399WVlYAAAAAAACsrKzf398AAAAAAAAAAAAAAADg4ODR0dHe3t4ReYomAAAAOHRSTlMAQPzFDvXsrm47E/C+tKl/9+dnGQXx8NuvioN5VVBKRTQQBvrz7d3Z18u4t7SjlYBfX11NMDAfCv0TF7MAAADjSURBVCjPpZDXcsJADEXX29wbEHoCIT30fg3//1941svA2h5eOE+aOdJIuuRJ9iyB/O/zqhlQKFKrbByAuZy7DNQ1DReIiipCyktD7W3Xz7o74r3AMZSN0M9y/HcSwjYUwzRTvJIemKFC/BRqWZmKIU7FVL6rYahDgo+z2hWhXfq6AXx9nmYrBqwrP+s0qEPKeHFKc/H7VhGLBJq/oWEsCaDTi+O+LYCgeTNjATrXqR4HFB3valrfkONboysR3B0+IneMgOsxgeoywo50JbAx1RBSr0INLaWadaq4f2LVMCGPuACORSZPQ0RWdgAAAABJRU5ErkJggg=="
+                                alt="">
+                                <span id="userName"></span></a>
+                        <div class="boxpopup">
+                            <p>Welcome to Quick Deals</p>
+                            <button id="logout" class="logincss" onclick="location.href='index.html'">Sign Out</button>
+                        </div>
                     </div>
 
                     <a href="#"><img
@@ -55,7 +65,7 @@
                             alt="">
                         <span>Favorites</span></a>
 
-                    <a href="#"><img
+                    <a href="#" id="cartPage"><img
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAn1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqJAAUEQD/2QAAAABJPgAAAAAAAAAAAAD/2gD/2gAAAAAAAAD/2gAAAAAAAAAAAAD/2QAAAAAAAAD/2wAAAAAAAAD/2QAAAAD/4wAAAAD/2gD51ADQsQCiigB0YwBGOwCQauaIAAAALnRSTlMA09hV4UL48rFIE/zazLuVfXZJIR39++3r5+fk29TJqKakm46JgG9lW1pNNjISfz/FPQAAALRJREFUKM+dz1cKwzAQRdHn7vRip/feX+r+1xaDLDx2Igi5XyMODCP8mcWkvpkYwVDIg4mabBhkxs9qinx+qZxe0ka+Mn01zNkq0JmWvmJwFU0Ah6GiIzuSekCLa0UReRM0BRrcQRXwLmgB1OmlVOND0AaoMk5pyaegPVCpIG3Ll6ATYtqaPHYFXZJ3mH2+2Aq6ekF8D79UGrklPTu27Qgakq6ex6QlyBVk56kdBNnCqlpo7g1Gxypv685O3AAAAABJRU5ErkJggg=="
                             alt="">
                         <span>Cart</span></a>
@@ -467,9 +477,9 @@
         <p>Copyright © 2020-2022 Quick Deals.com. All Rights Reserved.</p>
     </div>
 
-    <!-- <a href="cart.html">cart</a> -->
 </body>
 
 </html>
 
 <script src="Scripts/index.js"></script>
+<script src="Scripts/validation.js"></script>
