@@ -47,14 +47,10 @@ function showData(data) {
         let qutdiv = document.createElement("div");
         qutdiv.setAttribute("class", "qutdiv");
         let qutText = document.createElement("p");
-        qutText.innerText = "QTY:";
-        let increment = document.createElement("button");
-        increment.innerText = "-";
-        let quantity = document.createElement("h4");
-        quantity.innerText = "0";
-        let decrement = document.createElement("button");
-        decrement.innerText = "+";
-        qutdiv.append(qutText, increment, quantity, decrement);
+        qutText.innerText = "Category:";
+        let Category = document.createElement("h4");
+        Category.innerText = element.category;
+        qutdiv.append(qutText,Category);
 
         let addTocart = document.createElement("button");
         addTocart.setAttribute("id", "addTocart");

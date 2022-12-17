@@ -1,15 +1,28 @@
 let userName = JSON.parse(localStorage.getItem("userName"));
 let matData = JSON.parse(localStorage.getItem(userName[0].uname)) || [];
-
-
-// console.log(userName[0].uname)
-// console.log(matData)
-
 let cont = document.getElementById("showCartData");
+let total_price = document.getElementById("total_price");
+let disCount = document.getElementById("disCount");
+let bill = document.getElementById("bill");
+
+let userNameIs = document.getElementById("userNameIs");
+userNameIs.innerText = userName[0].uname;
+let refresh = document.getElementById("logout");
+
+refresh.addEventListener("click", () => {
+    userName.forEach((element,index) => {
+        userName.splice(index,1);
+        localStorage.setItem("userName",JSON.stringify(userName));
+    });
+})
+
+
 
 function showData(data) {
     cont.innerHTML = null;
     
+    let total = 0;
+    // console.log(typeof(total))
     data.forEach((element, index) => {
         let amount = 0;
         let cartDiv = document.createElement("div");
@@ -83,24 +96,30 @@ function showData(data) {
         item_3.append(qutdiv);
 
         amount += (element.quantity * element.price);
-
+        total +=(element.quantity * element.price);
         item_4.append("$" + amount);
-
+        
         let deleteBtn = document.createElement("p");
         deleteBtn.setAttribute("class", "catp")
         deleteBtn.innerText = "Delete";
-
+        
         deleteBtn.addEventListener("click", () => {
             data.splice(index,1);
             localStorage.setItem(`${userName[0].uname}`, JSON.stringify(matData));
             showData(matData);
         })
-
+        
         item_5.append(deleteBtn);
-
+             
+        
         cartDiv.append(item_1, item_2, item_3, item_4, item_5)
         cont.append(cartDiv);
     });
+
+    total_price.innerText = "$"+total;
+    let disPrice = (total*3/100).toFixed(2);
+    disCount.innerText = "$"+disPrice;
+    bill.innerText = "$"+((total-disPrice).toFixed(2));
 }
 
 showData(matData);

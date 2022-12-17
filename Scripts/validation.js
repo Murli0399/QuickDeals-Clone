@@ -23,3 +23,19 @@ refresh.addEventListener("click", () => {
         localStorage.setItem("userName",JSON.stringify(userName));
     });
 })
+
+let cartPage = document.getElementById("cartPage");
+
+cartPage.addEventListener("click",() => {
+    if (userName == null) {
+        alert("Please Sign In First");
+    }
+    else {
+        if (userName.length > 0) {
+            location.href = "cart.html";
+        }
+        else {
+            alert("Please Sign In First");
+        }
+    }
+})

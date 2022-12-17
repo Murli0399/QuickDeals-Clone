@@ -1,7 +1,7 @@
 let myform = document.getElementById("form");
 let userData = JSON.parse(localStorage.getItem("userData"))||[];
 myform.addEventListener("submit",(event) => {
-    event.preventDefault();
+    // event.preventDefault();
     let name = myform.name.value;
     let email = myform.email.value;
     let cpsw = myform.cpsw.value;
@@ -28,6 +28,7 @@ myform.addEventListener("submit",(event) => {
         }
         userData.push(obj);
         localStorage.setItem("userData",JSON.stringify(userData));
+        location.href="login.html";
         alert("Register Successfully");
     }
 })

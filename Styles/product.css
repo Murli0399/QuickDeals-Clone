@@ -122,18 +122,13 @@
     border: 1px solid #ccc;
 }
 
-#container .descdiv .qutdiv button:hover {
-    color: orangered;
-}
 
 #container .descdiv .qutdiv h4 {
-    width: 40px;
-    background-color: #fff;
-    line-height: 28px;
-    cursor: pointer;
-    text-align: center;
-    font-size: 18px;
-    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 0 10px;
+    color: #666;
+    width: 60%;
+    font-size: 15px;
 }
 
 #container .descdiv .qutdiv p {
