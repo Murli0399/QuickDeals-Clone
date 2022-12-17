@@ -4,19 +4,6 @@
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
-nav {
-    padding: 20px 0;
-    width: 90%;
-    margin: auto;
-}
-
-nav div {
-    width: 20%;
-}
-
-nav div img {
-    width: 100%;
-}
 
 .loginform {
     width: 25%;

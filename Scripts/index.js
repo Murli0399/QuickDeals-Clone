@@ -17,13 +17,14 @@ setInterval(() => {
     if (i == arr.length) i = 0;
 }, 2000)
 ///////////////////////////////////////////////////////////
+let newData = [];
 let promise = fetch("./Scripts/apiData.json")
 .then((responseData) => {
     return responseData.json();
 })
 .then((acctualData) => {
-    // console.log(acctualData.data);
-    displayData(acctualData.data)
+    newData = acctualData.data;
+    displayData(newData);
 })
 .catch((error) => {
     console.log(error);
@@ -37,6 +38,7 @@ if(productDetail.length != 0){
 }
 
 function displayData(data) {
+    cont.innerHTML = null;
     data.forEach((element, index) => {
         let cart = document.createElement("div");
         let image = document.createElement("img");
@@ -70,7 +72,12 @@ function displayData(data) {
 // displayData(productlist)
 
 ////////////////////////////////////////////////////////////
-// slideshow
-
+document.getElementById("bordery").addEventListener("input",(e) => {
+    let input = e.target.value;
+    let filterData = newData.filter((el,index) => {
+        return el.detail.toLowerCase().includes(input);
+    })
+    displayData(filterData);
+})
 
 ////////////////////////////////////////////////////////////////
