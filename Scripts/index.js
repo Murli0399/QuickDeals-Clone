@@ -73,7 +73,7 @@ function displayData(data) {
 
 ////////////////////////////////////////////////////////////
 document.getElementById("bordery").addEventListener("input",(e) => {
-    let input = e.target.value;
+    let input = e.target.value.toLowerCase();
     let filterData = newData.filter((el,index) => {
         return el.detail.toLowerCase().includes(input);
     })
@@ -81,3 +81,17 @@ document.getElementById("bordery").addEventListener("input",(e) => {
 })
 
 ////////////////////////////////////////////////////////////////
+const mainhead = document.getElementById("navbar");
+const lastEle = document.querySelector(".copyright");
+
+const scrollElement = document.createElement("div");
+
+scrollElement.classList.add("scrollTop_style");
+
+scrollElement.innerHTML = `<i class="fa-solid fa-arrow-up scorll-top"></i>`;
+
+lastEle.after(scrollElement);
+
+scrollElement.addEventListener("click", () => {
+    mainhead.scrollIntoView({behavior: "smooth"})
+})

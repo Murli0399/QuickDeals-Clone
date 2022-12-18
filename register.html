@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <title>login in Quick Deals</title>
+    <title>Register in Quick Deals</title>
     <link rel="shortcut icon" href="logo/logo.png" type="image/x-icon">
 </head>
 
@@ -29,16 +29,28 @@
             <h3 class="signIn">REGISTER</h3>
         </div>
         <form id="form">
-            <input type="text" name="name" id="name" class="enterTag" placeholder="Name">
-            <input type="email" name="email" id="email" class="enterTag" placeholder="Email">
-            <input type="password" name="password" id="cpsw" class="enterTag" placeholder="Create Password">
-            <input type="password" name="password" id="rpsw" class="enterTag" placeholder="Re-type Password">
+            <input type="text" name="name" id="name" class="enterTag" placeholder="Name" required>
+            <input type="email" name="email" id="email" class="enterTag" placeholder="Email" required>
+            <input type="number" name="mobile" id="mobile" class="enterTag" placeholder="Mobile" required>
+            <input type="password" name="password" id="cpsw" class="enterTag" placeholder="Create Password" required>
+            <input type="password" name="password" id="rpsw" class="enterTag" placeholder="Re-type Password" required>
             <div><span>
                     <input type="checkbox" name="keepMe" id="keepMe" class="checkbox">
                     I agree to Gearbest Terms and Conditions and Privacy Policies.</span>
             </div>
             <button type="submit" value="submit">Sign In</button>
         </form>
+    </div>
+    <!-- ------------------------------------------- -->
+    <div id="registerMSG" class="modal">
+        <div class="modal-content">
+            <div>
+                <img src="images/right.jpg" alt="">
+            </div>
+            <h3>Congratulation</h3>
+            <h5>Registration Successfully</h5>
+            <button id="registerOk" class="otpcss">Go to Login Page</button>
+        </div>
     </div>
 </body>
 <script src="Scripts/register.js"></script>

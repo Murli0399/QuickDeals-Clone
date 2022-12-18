@@ -65,3 +65,6 @@ nav .popup h4{
     cursor: pointer;
     background-color: #ffda00;
 }
+#ifUserIn{
+    display: none;
+}

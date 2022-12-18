@@ -152,7 +152,8 @@
     border-color: #f30240;
     font-weight: 700;
 }
-#container .descdiv #addTocart:hover{
+
+#container .descdiv #addTocart:hover {
     background-color: #e10139;
     cursor: pointer;
 }
@@ -170,23 +171,27 @@
     color: #f30240;
     font-weight: 700;
 }
-#container .descdiv #buyNow:hover{
+
+#container .descdiv #buyNow:hover {
     background-color: #e7d9db;
     cursor: pointer;
 }
-#container .descdiv .linediv{
+
+#container .descdiv .linediv {
     width: 100%;
     /* height: 40px; */
     display: flex;
     margin-top: 20px;
 }
-#container .descdiv .linediv .firstlinediv{
+
+#container .descdiv .linediv .firstlinediv {
     width: 41%;
     /* border: 1px solid red; */
     display: inline-block;
     height: 36px;
 }
-#container .descdiv .linediv .firstlinediv img{
+
+#container .descdiv .linediv .firstlinediv img {
     margin-right: 10px;
     padding: 0 5px;
     height: 28px;
@@ -195,29 +200,33 @@
     text-align: center;
     cursor: auto;
 }
-#container .descdiv .linediv .secondlinediv{
+
+#container .descdiv .linediv .secondlinediv {
     width: 55%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-#container .descdiv .linediv .secondlinediv p{
+
+#container .descdiv .linediv .secondlinediv p {
     color: #666;
     font-size: 14px;
     cursor: pointer;
 }
-#container .descdiv .linediv .secondlinediv p:hover{
+
+#container .descdiv .linediv .secondlinediv p:hover {
     color: orangered;
 }
+
 /* ////////////////////////////////////////////////////////////////// */
 
- .modelsupport{
+.modelsupport {
     width: 25%;
-    margin: auto; 
+    margin: auto;
     padding: 30px;
     line-height: 21px;
     word-break: break-word;
-    position: absolute; 
+    position: absolute;
     left: 50%;
     transform: translate(-50%);
     background-color: #fff;
@@ -225,19 +234,22 @@
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
     display: none;
 }
-.modelsupport h3{
+
+.modelsupport h3 {
     margin: 0;
     color: #000;
     font-size: 18px;
     font-weight: 700;
 }
-.modelsupport p{
+
+.modelsupport p {
     padding: 20px 0 30px 0;
     line-height: 1.5;
     font-size: 14px;
     color: #000;
 }
-.modelsupport button{
+
+.modelsupport button {
     background: #ffda00;
     font-weight: 700;
     height: 40px;
@@ -250,4 +262,18 @@
     color: #000;
     cursor: pointer;
     outline: none;
+}
+
+/* ----------------------------------------------- */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(51, 51, 51);
 }
