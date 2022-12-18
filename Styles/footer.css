@@ -249,3 +249,24 @@
     font-size: 14px;
     padding: 15px;
 }
+
+/* --------------------------------------------------- */
+
+.scrollTop_style{
+    position: fixed;
+    right: 2%;
+    bottom: 5%;
+    z-index: 1;
+}
+.scorll-top{
+    /* width: 4rem; */
+    /* height: 4rem; */
+    background-color: #ffda00;
+    display: inline-block;
+    padding: 1rem 1.1rem;
+    position: relative;
+    border-radius: 50%;
+    color: var(--white);
+    animation: water-wave 3s linear infinite;
+    cursor: pointer;
+}

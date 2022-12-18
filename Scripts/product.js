@@ -1,8 +1,22 @@
 let productDetail = JSON.parse(localStorage.getItem("productDetail")) || [];
 let container = document.getElementById("container");
 let userName = JSON.parse(localStorage.getItem("userName"));
-let matData = JSON.parse(localStorage.getItem(userName[0].uname)) || [];
+let matData = JSON.parse(localStorage.getItem(`${userName[0].uname}`)) || [];
 
+if (userName == null) {
+    document.getElementById("ifUserIn").style.display = "none";
+}else{
+    document.getElementById("userNameIs").innerText = userName[0].uname;
+    document.getElementById("ifUserIn").style.display = "block";
+}
+let refresh = document.getElementById("logout");
+
+refresh.addEventListener("click", () => {
+    userName.forEach((element,index) => {
+        userName.splice(index,1);
+        localStorage.setItem("userName",JSON.stringify(userName));
+    });
+})
 
 function showData(data) {
     data.forEach((element, index) => {
@@ -76,6 +90,21 @@ function showData(data) {
         let buyNow = document.createElement("button");
         buyNow.setAttribute("id", "buyNow");
         buyNow.innerText = "Buy Now";
+        buyNow.addEventListener("click", () => {
+            if (userName == null) {
+                alert("Please Sign In First");
+            }
+            else {
+                if (userName.length > 0) {
+                    matData.push({...element,quantity:1});
+                    localStorage.setItem(`${userName[0].uname}`, JSON.stringify(matData));
+                    location.href = "cart.html";
+                }
+                else {
+                    alert("Something is Wrong");
+                }
+            }
+        })
 
         let linediv = document.createElement("div");
         linediv.setAttribute("class", "linediv");
@@ -124,3 +153,19 @@ function showData(data) {
 }
 
 showData(productDetail);
+// ---------------------------------------
+
+const mainhead = document.getElementById("navbar");
+const lastEle = document.querySelector(".copyright");
+
+const scrollElement = document.createElement("div");
+
+scrollElement.classList.add("scrollTop_style");
+
+scrollElement.innerHTML = `<i class="fa-solid fa-arrow-up scorll-top"></i>`;
+
+lastEle.after(scrollElement);
+
+scrollElement.addEventListener("click", () => {
+    mainhead.scrollIntoView({behavior: "smooth"})
+})

@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Styles/product.css">
-    <link rel="stylesheet" href="Styles/footer.css">
+    <link rel="stylesheet" href="Styles/buyNow.css">
     <link rel="stylesheet" href="Styles/navbar.css">
+    <link rel="stylesheet" href="Styles/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/ff751ea986.js" crossorigin="anonymous"></script>
-    <title>Quick Deals Product Detail</title>
+    <title>Ouick Deals Payment Page</title>
     <link rel="shortcut icon" href="logo/logo.png" type="image/x-icon">
 </head>
 
@@ -19,6 +19,7 @@
         <div>
             <a href="index.html"><img src="logo/logoname.png" alt="logo"></a>
         </div>
+
         <div class="popup" id="ifUserIn">
 
             <h4 id="userNameIs"></h4>
@@ -29,42 +30,100 @@
         </div>
     </nav>
 
-    <div id="container"></div>
-    <!-- ////////////////////////////////////////////////// -->
 
+    <div class="container">
+        <form action="">
+            <div class="row">
+                <div class="col">
+                    <h3 class="title">Billing Address</h3>
+                    <div class="inputBox">
+                        <span>Full Name :</span>
+                        <input type="text" id="name" placeholder="Enter Your Name">
+                    </div>
+                    <div class="inputBox">
+                        <span>Email :</span>
+                        <input type="email" id="email" placeholder="example@example.com">
+                    </div>
+                    <div class="inputBox">
+                        <span>Address :</span>
+                        <input type="text" id="add" placeholder="Enter Your Address">
+                    </div>
+                    <div class="inputBox">
+                        <span>City :</span>
+                        <input type="text" id="city" placeholder="Enter Your City">
+                    </div>
 
-    <div id="supportsys1" class="modelsupport ">
-        <h3>Tax Info</h3>
-        <p>Tax Information ALL prices listed on Gearbest exclude taxes, import fees, and customs duties. Customers
-            may be subject to these fees.</p>
-        <button onclick="document.getElementById('supportsys1').style.display='none'">I understand and agree</button>
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>State :</span>
+                            <input type="text" id="state" placeholder="Enter Your State">
+                        </div>
+                        <div class="inputBox">
+                            <span>Pin Code :</span>
+                            <input type="text" id="pin" placeholder="123 456">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+
+                    <h3 class="title">Payment</h3>
+
+                    <div class="inputBox">
+                        <span>Cards Accepted :</span>
+                        <img src="images/card_img.png" alt="">
+                    </div>
+                    <div class="inputBox">
+                        <span>Name On Card :</span>
+                        <input type="text" id="holder" placeholder="Enter the Cardholder's Name">
+                    </div>
+                    <div class="inputBox">
+                        <span>Credit Card Number :</span>
+                        <input type="number" id="cnum" placeholder="1111-2222-3333-4444">
+                    </div>
+                    <div class="inputBox">
+                        <span>Exp Month :</span>
+                        <input type="text" id="month" placeholder="january">
+                    </div>
+
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>Exp Year :</span>
+                            <input type="number" id="year" placeholder="2022">
+                        </div>
+                        <div class="inputBox">
+                            <span>CVV :</span>
+                            <input type="text" id="cvv" placeholder="1234">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="Proceed to Checkout" id="checkOut" class="submit-btn">
+        </form>
     </div>
-    <div id="supportsys2" class="modelsupport">
-        <h3>72 Hour Price Protection Program</h3>
-        <p>At Gearbest we work hard to ensure we can offer our customers high quality products at the lowest
-            possible price. If you purchase a Gearbest product and find that the price has dropped within 72 hours
-            of paying the order, we will refund the difference - no questions asked. Simply contact our Customer
-            Service team at our Support Center with the details. Please note that our 72 hours Price Protection
-            Program does not apply to Flash Deal products.</p>
-        <button onclick="document.getElementById('supportsys2').style.display='none'">I Got It</button>
+
+    <!-- ------------------------------------------------------- -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <h4 id="otp"></h4>
+            <p>Enter OTP Here</p>
+            <input type="number" id="inputOTP">
+            <button id="checkOTP" class="otpcss">Confirm Payment</button>
+        </div>
+
     </div>
-    <div id="supportsys3" class="modelsupport">
-        <h3>Price Disclaimer</h3>
-        <p>Price DisclaimerPrices may fluctuate due to page caches, updates or sales ending; the most up-to-date
-            price takes priority.</p>
-        <button onclick="document.getElementById('supportsys3').style.display='none'">I understand and agree</button>
-    </div>
-    <div id="supportsys4" class="modelsupport">
-        <h3>ERROR REPORT</h3>
-        <p>If you find an error on this product page, let us know below. We'll check the information within 2
-            working days. The most helpful comments will receive some awesome rewards.</p>
-        <button onclick="document.getElementById('supportsys4').style.display='none'">I Got It</button>
+    <div id="orderMSG" class="modal">
+        <div class="modal-content">
+            <div>
+                <img src="images/right.jpg" alt="">
+            </div>
+            <h3>Congratulation</h3>
+            <h5>Your Order Placed Successfully</h5>
+            <button id="closeOrder" class="otpcss">Close</button>
+        </div>
     </div>
 
-
-
-    <!-- //////////////////////////////////////////////////////////////////// -->
-
+    <!-- ----------------------------------------------- -->
     <div class="popularSeacrh">
         <div class="search">
             <div class="extraDiv">
@@ -91,7 +150,8 @@
         </div>
     </div>
 
-    <!-- ------------------------------------------ -->
+    <!-- ----------------------------------------------------- -->
+
 
     <div class="someExtra">
         <a href="index.html">
@@ -201,4 +261,4 @@
 </body>
 
 </html>
-<script src="Scripts/product.js"></script>
+<script src="Scripts/buyNow.js"></script>

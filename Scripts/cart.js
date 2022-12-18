@@ -5,22 +5,24 @@ let total_price = document.getElementById("total_price");
 let disCount = document.getElementById("disCount");
 let bill = document.getElementById("bill");
 
-let userNameIs = document.getElementById("userNameIs");
-userNameIs.innerText = userName[0].uname;
+if (userName == null) {
+    document.getElementById("ifUserIn").style.display = "none";
+} else {
+    document.getElementById("userNameIs").innerText = userName[0].uname;
+    document.getElementById("ifUserIn").style.display = "block";
+}
 let refresh = document.getElementById("logout");
 
 refresh.addEventListener("click", () => {
-    userName.forEach((element,index) => {
-        userName.splice(index,1);
-        localStorage.setItem("userName",JSON.stringify(userName));
+    userName.forEach((element, index) => {
+        userName.splice(index, 1);
+        localStorage.setItem("userName", JSON.stringify(userName));
     });
 })
 
-
-
 function showData(data) {
     cont.innerHTML = null;
-    
+
     let total = 0;
     // console.log(typeof(total))
     data.forEach((element, index) => {
@@ -71,6 +73,7 @@ function showData(data) {
         decrement.addEventListener("click", () => {
             element.quantity--;
             // amount = amount+(1*element.price);
+            localStorage.setItem(`${userName[0].uname}`, JSON.stringify(matData));
             showData(matData);
         })
 
@@ -82,6 +85,7 @@ function showData(data) {
         increment.addEventListener("click", () => {
             element.quantity++;
             // amount = amount-(1*element.price);
+            localStorage.setItem(`${userName[0].uname}`, JSON.stringify(matData));
             showData(matData);
         })
 
@@ -95,31 +99,48 @@ function showData(data) {
 
         item_3.append(qutdiv);
 
-        amount += (element.quantity * element.price);
-        total +=(element.quantity * element.price);
+        amount += Math.round(element.quantity * element.price);
+        total += Math.round(element.quantity * element.price);
         item_4.append("$" + amount);
-        
+
         let deleteBtn = document.createElement("p");
         deleteBtn.setAttribute("class", "catp")
         deleteBtn.innerText = "Delete";
-        
+
         deleteBtn.addEventListener("click", () => {
-            data.splice(index,1);
+            data.splice(index, 1);
             localStorage.setItem(`${userName[0].uname}`, JSON.stringify(matData));
             showData(matData);
         })
-        
+
         item_5.append(deleteBtn);
-             
-        
+
+
         cartDiv.append(item_1, item_2, item_3, item_4, item_5)
         cont.append(cartDiv);
     });
 
-    total_price.innerText = "$"+total;
-    let disPrice = (total*3/100).toFixed(2);
-    disCount.innerText = "$"+disPrice;
-    bill.innerText = "$"+((total-disPrice).toFixed(2));
+    total_price.innerText = "$" + total;
+    let disPrice = Math.round(total * 3 / 100);
+    disCount.innerText = "$" + disPrice;
+    bill.innerText = "$" + (Math.round(total - disPrice));
 }
 
 showData(matData);
+
+// ----------------------------------
+
+const mainhead = document.getElementById("navbar");
+const lastEle = document.querySelector(".copyright");
+
+const scrollElement = document.createElement("div");
+
+scrollElement.classList.add("scrollTop_style");
+
+scrollElement.innerHTML = `<i class="fa-solid fa-arrow-up scorll-top"></i>`;
+
+lastEle.after(scrollElement);
+
+scrollElement.addEventListener("click", () => {
+    mainhead.scrollIntoView({ behavior: "smooth" })
+})
