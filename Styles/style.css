@@ -590,7 +590,8 @@
 }
 
 #container div div {
-    background-color: #f30240;
+    display: none;
+    /* background-color: #f30240;
     text-align: center;
     color: #fff;
     padding: 12px;
@@ -598,7 +599,7 @@
     border-radius: 50%;
     position: absolute;
     margin-top: -24.4%;
-    margin-left: 11.8%;
+    margin-left: 11.8%; */
 }
 
 #container div div h5 {

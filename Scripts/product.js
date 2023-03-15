@@ -1,20 +1,20 @@
 let productDetail = JSON.parse(localStorage.getItem("productDetail")) || [];
 let container = document.getElementById("container");
-let userName = JSON.parse(localStorage.getItem("userName"));
-let matData = JSON.parse(localStorage.getItem(`${userName[0].uname}`)) || [];
+let userName = JSON.parse(localStorage.getItem("userName")) || [];
 
-if (userName == null) {
-    document.getElementById("ifUserIn").style.display = "none";
-}else{
+
+if (userName.length > 0) {
     document.getElementById("userNameIs").innerText = userName[0].uname;
     document.getElementById("ifUserIn").style.display = "block";
+} else {
+    document.getElementById("ifUserIn").style.display = "none";
 }
 let refresh = document.getElementById("logout");
 
 refresh.addEventListener("click", () => {
-    userName.forEach((element,index) => {
-        userName.splice(index,1);
-        localStorage.setItem("userName",JSON.stringify(userName));
+    userName.forEach((element, index) => {
+        userName.splice(index, 1);
+        localStorage.setItem("userName", JSON.stringify(userName));
     });
 })
 
@@ -64,7 +64,7 @@ function showData(data) {
         qutText.innerText = "Category:";
         let Category = document.createElement("h4");
         Category.innerText = element.category;
-        qutdiv.append(qutText,Category);
+        qutdiv.append(qutText, Category);
 
         let addTocart = document.createElement("button");
         addTocart.setAttribute("id", "addTocart");
@@ -72,37 +72,32 @@ function showData(data) {
 
         addTocart.addEventListener("click", () => {
             if (userName == null) {
-                alert("Please Sign In First");
-            }
-            else {
+                alert("Please Login First");
+            } else {
                 if (userName.length > 0) {
-                    matData.push({...element,quantity:1});
+                    let matData = JSON.parse(localStorage.getItem(`${userName[0].uname}`)) || [];
+                    matData.push({ ...element, quantity: 1 });
                     localStorage.setItem(`${userName[0].uname}`, JSON.stringify(matData));
                     location.href = "cart.html";
                 }
                 else {
-                    alert("Something is Wrong");
+                    alert("Please Login First");
                 }
             }
         })
-
 
         let buyNow = document.createElement("button");
         buyNow.setAttribute("id", "buyNow");
         buyNow.innerText = "Buy Now";
         buyNow.addEventListener("click", () => {
-            if (userName == null) {
-                alert("Please Sign In First");
+            if (userName.length > 0) {
+                let matData = JSON.parse(localStorage.getItem(`${userName[0].uname}`)) || [];
+                matData.push({ ...element, quantity: 1 });
+                localStorage.setItem(`${userName[0].uname}`, JSON.stringify(matData));
+                location.href = "cart.html";
             }
             else {
-                if (userName.length > 0) {
-                    matData.push({...element,quantity:1});
-                    localStorage.setItem(`${userName[0].uname}`, JSON.stringify(matData));
-                    location.href = "cart.html";
-                }
-                else {
-                    alert("Something is Wrong");
-                }
+                alert("Please Login First");
             }
         })
 
@@ -167,5 +162,5 @@ scrollElement.innerHTML = `<i class="fa-solid fa-arrow-up scorll-top"></i>`;
 lastEle.after(scrollElement);
 
 scrollElement.addEventListener("click", () => {
-    mainhead.scrollIntoView({behavior: "smooth"})
+    mainhead.scrollIntoView({ behavior: "smooth" })
 })

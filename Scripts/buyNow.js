@@ -8,6 +8,7 @@ let iemail = document.getElementById("email");
 let iaddress = document.getElementById("add");
 let icity = document.getElementById("city");
 let istate = document.getElementById("state");
+let ipin = document.getElementById("pin");
 let icardHolder = document.getElementById("holder");
 let icard_number = document.getElementById("cnum");
 let iexpMonth = document.getElementById("month");
@@ -19,18 +20,17 @@ document.getElementById("checkOTP").addEventListener("click", () => {
         alert("Payment Successful");
         document.getElementById("myModal").style.display = "none";
         document.getElementById("orderMSG").style.display = "block";
-        matData.forEach((el,ind) => {
-            matData.splice(ind,matData.length);
-            localStorage.setItem(`${userName[0].uname}`,JSON.stringify(matData));
+        matData.forEach((el, ind) => {
+            matData.splice(ind, matData.length);
+            localStorage.setItem(`${userName[0].uname}`, JSON.stringify(matData));
         })
-        
     } else {
         alert("Please Enter Correct OTP");
         document.getElementById("inputOTP").value = null;
     }
 })
 
-document.getElementById("closeOrder").addEventListener("click",() => {
+document.getElementById("closeOrder").addEventListener("click", () => {
     document.getElementById("orderMSG").style.display = "none";
     location.href = "index.html";
 })
@@ -53,35 +53,48 @@ window.addEventListener("load", () => {
             for (let key in userData[i]) {
                 count++;
             }
-            if (count < 5) {
-                document.getElementById("checkOut").addEventListener("click", () => {
+            if (count < 6) {
+                document.getElementById("checkOut").addEventListener("click", (e) => {
+                    e.preventDefault();
                     if (userData[i].email == iemail.value) {
                         let identity = userData[i].id;
                         let mob = userData[i].mobile;
                         let pass = userData[i].psw;
-                        let obj = {
-                            id: identity,
-                            name: iname.value,
-                            email: iemail.value,
-                            mobile: mob,
-                            psw: pass,
-                            address: iaddress.value,
-                            city: icity.value,
-                            state: istate.value,
-                            cardHolder: icardHolder.value,
-                            card_number: icard_number.value,
-                            expMonth: iexpMonth.value,
-                            expYear: iexpYear.value,
-                            cvv: icvv.value,
+                        if (ipin.value.length < 6 || ipin.value.length > 6) {
+                            alert("Pin code is wrong");
+                        } else if (icard_number.value.length < 16 || icard_number.value.length > 16) {
+                            alert("Card number is wrong");
+                        } else if (iexpYear.value.length < 4 || iexpYear.value.length > 4) {
+                            alert("Please enter correct Year");
+                        } else if (icvv.value.length < 3 || icvv.value.length > 3) {
+                            alert("CVV Number is not correct");
+                        } else {
+                            let obj = {
+                                id: identity,
+                                name: iname.value,
+                                email: iemail.value,
+                                mobile: mob,
+                                psw: pass,
+                                address: iaddress.value,
+                                city: icity.value,
+                                state: istate.value,
+                                cardHolder: icardHolder.value,
+                                card_number: icard_number.value,
+                                expMonth: iexpMonth.value,
+                                expYear: iexpYear.value,
+                                cvv: icvv.value,
+                            }
+                            userData.splice(i, 1);
+                            userData.push(obj);
+                            localStorage.setItem("userData", JSON.stringify(userData));
+                            document.getElementById("myModal").style.display = "block";
                         }
-                        userData.splice(i, 1);
-                        userData.push(obj);
-                        localStorage.setItem("userData", JSON.stringify(userData));
-                        document.getElementById("myModal").style.display = "block";
+                    } else {
+                        alert("username is incorrect");
                     }
                 })
                 break;
-            }else{
+            } else {
                 document.getElementById("myModal").style.display = "block";
             }
         }
@@ -129,5 +142,5 @@ scrollElement.innerHTML = `<i class="fa-solid fa-arrow-up scorll-top"></i>`;
 lastEle.after(scrollElement);
 
 scrollElement.addEventListener("click", () => {
-    mainhead.scrollIntoView({behavior: "smooth"})
+    mainhead.scrollIntoView({ behavior: "smooth" })
 })
