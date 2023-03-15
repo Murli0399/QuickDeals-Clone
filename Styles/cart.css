@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+.cart_page {
+    width: 100%;
+    margin: auto;
+    padding: 38px 0 30px;
+    background: #f2f2f2;
+    line-height: 1;
+}
+
+.table_head {
+    border: 1px solid #eee;
+    background: #fff;
+    box-sizing: border-box;
+    width: 85%;
+    margin: auto;
+    font-size: 0;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.table_head .rewHead {
+    line-height: 50px;
+    font-size: 14px;
+    color: #999;
+
+}
+
+.carttable {
+    border: 1px solid #eee;
+    background: #fff;
+    box-sizing: border-box;
+    width: 85%;
+    margin: 20px auto;
+    padding: 20px 20px;
+    line-height: 18px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.head-1 {
+    width: 45%;
+    display: flex;
+    /* border: 1px solid black; */
+    justify-content: space-between;
+
+}
+
+.head-2,
+.head-3,
+.head-4,
+.head-5 {
+    width: 10%;
+    display: inline-grid;
+    align-items: center;
+    text-align: center;
+}
+
+
+.head-1 .imagediv {
+    width: 30%;
+
+}
+
+.head-1 .imagediv img {
+    width: 100%;
+}
+
+.detaildiv {
+    width: 60%;
+    position: relative;
+    white-space: nowrap;
+}
+
+.detaildiv h3 {
+    color: #000;
+    max-width: 311px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    margin: 10px 0;
+    vertical-align: middle;
+}
+
+.detaildiv p {
+    line-height: 20px;
+    font-size: 13px;
+    color: #999;
+}
+
+.catp {
+    line-height: 20px;
+    font-size: 15px;
+    color: #666;
+    cursor: pointer;
+}
+.catp:hover {
+    color: orangered;
+}
+.qutdiv {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.qutdiv button {
+    width: 35px;
+    background-color: #fff;
+    line-height: 28px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 24px;
+    border: 1px solid #ccc;
+}
+
+.qutdiv button:hover {
+    color: orangered;
+}
+
+.qutdiv h4 {
+    width: 40px;
+    background-color: #fff;
+    line-height: 28px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #ccc;
+}
+
+/* ------------------------------------------------------ */
+.totalBudget {
+    width: 85%;
+    margin: 30px auto;
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 30px 0;
+    /* margin-top: 30px; */
+}
+
+.totalBudget .upperDiv {
+    overflow: hidden;
+}
+
+.totalBudget .upperDiv .freeDelevary {
+    width: 60%;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.totalBudget .upperDiv .freeDelevary span {
+    display: inline-flex;
+    width: 200px;
+    height: 32px;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+
+.totalBudget .upperDiv .freeDelevary span img {
+    width: 32px;
+    height: 32px;
+    fill: #ff8a00;
+}
+
+.totalBudget .upperDiv .freeDelevary span div {
+    margin-left: 8px;
+    width: 160px;
+    height: 32px;
+}
+
+.totalBudget .upperDiv .freeDelevary span div .font14 {
+    line-height: 18px;
+    font-size: 14px;
+    color: #000;
+    font-weight: 700;
+}
+
+.totalBudget .upperDiv .freeDelevary span div p {
+    line-height: 14px;
+    font-size: 13px;
+    color: #000;
+}
+
+.totalBudget .upperDiv ul {
+    width: 20%;
+    float: right;
+    white-space: nowrap;
+    list-style: none;
+    padding: 0 20px;
+}
+
+.totalBudget .upperDiv ul li {
+    color: #000;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: right;
+    display: list-item;
+}
+
+.totalBudget .upperDiv ul li .firstSpan {
+    text-align: left;
+    min-width: 90px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.totalBudget .upperDiv ul li .secondSpan {
+    font-size: 14px;
+    min-width: 120px;
+    text-align: right;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.totalBudget .upperDiv ul li .totalSpan {
+    font-weight: 700;
+    text-align: left;
+    min-width: 90px;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 45px;
+}
+
+.totalBudget .upperDiv ul li .priceSpan {
+    font-weight: 700;
+    font-size: 24px;
+    color: #f30240;
+    min-width: 120px;
+    text-align: right;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 45px;
+}
+
+.totalBudget .lowerDiv {
+    padding-top: 10px;
+    padding: 20px 20px 0 20px;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+}
+
+.totalBudget .lowerDiv .firstlower {
+    display: inline-block;
+    width: 20%;
+    /* border: 1px solid red; */
+}
+
+.totalBudget .lowerDiv .firstlower a {
+    float: left;
+    line-height: 40px;
+    font-size: 14px;
+    color: #666;
+}
+.totalBudget .lowerDiv .firstlower a:hover{
+    color: orangered;
+}
+
+.totalBudget .lowerDiv .secondlower {
+    display: inline-block;
+    width: 70%;
+    /* border: 1px solid red; */
+}
+
+.totalBudget .lowerDiv p {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.totalBudget .lowerDiv p a {
+    color: #666;
+    text-decoration: none;
+    font-size: inherit;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.totalBudget .lowerDiv p span {
+    font-size: 14px;
+    color: #000;
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.totalBudget .lowerDiv .checkOut {
+    background: #ffda00;
+    text-decoration: none;
+    font-weight: 700;
+    height: 40px;
+    float: right;
+    padding: 0 30px;
+    line-height: 40px;
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    text-align: center;
+    color: #000;
+    cursor: pointer;
+    outline: none;
+}
+.totalBudget .lowerDiv .checkOut:hover{
+    background: #f0cd09;
+}
+
+.weAccept {
+    width: 85%;
+    margin: 30px auto;
+    display: flex;
+}
+
+.weAccept span {
+    line-height: 32px;
+    font-size: 14px;
+    color: #000;
+}
+
+.weAccept img {
+    margin: 0 5px;
+}
+
+/* ---------------------------------------------------- */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(51, 51, 51);
+}

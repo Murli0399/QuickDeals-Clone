@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/buyNow.css">
+    <link rel="stylesheet" href="Styles/navbar.css">
+    <link rel="stylesheet" href="Styles/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/ff751ea986.js" crossorigin="anonymous"></script>
+    <title>Ouick Deals Payment Page</title>
+    <link rel="shortcut icon" href="logo/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div>
+            <a href="index.html"><img src="logo/logoname.png" alt="logo"></a>
+        </div>
+
+        <div class="popup" id="ifUserIn">
+
+            <h4 id="userNameIs"></h4>
+            <div class="boxpopup">
+                <p>Sign Out here</p>
+                <button id="logout" class="logincss" onclick="location.href='index.html'">Sign Out</button>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <form action="">
+            <div class="row">
+                <div class="col">
+                    <h3 class="title">Billing Address</h3>
+                    <div class="inputBox">
+                        <span>Full Name :</span>
+                        <input type="text" id="name" placeholder="Enter Your Name">
+                    </div>
+                    <div class="inputBox">
+                        <span>Email :</span>
+                        <input type="email" id="email" placeholder="example@example.com">
+                    </div>
+                    <div class="inputBox">
+                        <span>Address :</span>
+                        <input type="text" id="add" placeholder="Enter Your Address">
+                    </div>
+                    <div class="inputBox">
+                        <span>City :</span>
+                        <input type="text" id="city" placeholder="Enter Your City">
+                    </div>
+
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>State :</span>
+                            <input type="text" id="state" placeholder="Enter Your State">
+                        </div>
+                        <div class="inputBox">
+                            <span>Pin Code :</span>
+                            <input type="text" id="pin" placeholder="123 456">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+
+                    <h3 class="title">Payment</h3>
+
+                    <div class="inputBox">
+                        <span>Cards Accepted :</span>
+                        <img src="images/card_img.png" alt="">
+                    </div>
+                    <div class="inputBox">
+                        <span>Name On Card :</span>
+                        <input type="text" id="holder" placeholder="Enter the Cardholder's Name">
+                    </div>
+                    <div class="inputBox">
+                        <span>Credit Card Number :</span>
+                        <input type="number" id="cnum" placeholder="1111-2222-3333-4444">
+                    </div>
+                    <div class="inputBox">
+                        <span>Exp Month :</span>
+                        <input type="text" id="month" placeholder="january">
+                    </div>
+
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>Exp Year :</span>
+                            <input type="number" id="year" placeholder="2022">
+                        </div>
+                        <div class="inputBox">
+                            <span>CVV :</span>
+                            <input type="text" id="cvv" placeholder="1234">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="Proceed to Checkout" id="checkOut" class="submit-btn">
+        </form>
+    </div>
+
+    <!-- ------------------------------------------------------- -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <h4 id="otp"></h4>
+            <p>Enter OTP Here</p>
+            <input type="number" id="inputOTP">
+            <button id="checkOTP" class="otpcss">Confirm Payment</button>
+        </div>
+
+    </div>
+    <div id="orderMSG" class="modal">
+        <div class="modal-content">
+            <div>
+                <img src="images/right.jpg" alt="">
+            </div>
+            <h3>Congratulation</h3>
+            <h5>Your Order Placed Successfully</h5>
+            <button id="closeOrder" class="otpcss">Close</button>
+        </div>
+    </div>
+
+    <!-- ----------------------------------------------- -->
+    <div class="popularSeacrh">
+        <div class="search">
+            <div class="extraDiv">
+                <div class="pspsps">
+                    <p>Popular Searches:</p>
+                </div>
+                <div class="linkss">
+                    <a href="#">xiaomi poco m3 </a>
+                    <a href="#">ortur master 2 20w </a>
+                    <a href="#">cellphone accessories </a>
+                    <a href="#">drons toy</a>
+                    <a href="#">mi accessories </a>
+                    <a href="#">men's white tops</a>
+                    <a href="#">note phones</a>
+                    <a href="#">mens' shoes </a>
+                    <a href="#">battery otg</a>
+                    <a href="#">black watch men's</a>
+                    <a href="#">home decored </a>
+                    <a href="#">de smartphones </a>
+                    <a href="#">mobile cell phoned</a>
+                    <a href="#">tpu smartphones </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------------------------------------------- -->
+
+
+    <div class="someExtra">
+        <a href="index.html">
+            <img src="logo/logoname.png" alt="">
+            <h2>AFFORDABLE QUALITY
+                <br>
+                FUN SHOPPING
+            </h2>
+        </a>
+        <div>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAyCAMAAADGIxO9AAABAlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg4OAAAAAAAAAAAAAAAAAAAAAAAADg4OAAAAAAAAAAAAAAAAAAAADg4OAAAADg4OAAAAAAAAAAAAAAAAAAAADk5OQAAAAAAADo6Oj///8AAADg4OAlJSUAAADg4OAaGhrg4ODg4ODg4OAAAADg4ODg4OAAAADh4eEAAADh4eHh4eHk5OQAAAAAAAAAAADg4OA4ODgeHh7Nzc0oKCgQEBAJCQnb29vExMSamppLS0sTExO/v7+zs7OoqKigoKB9fX1wcHBaWloYGBg9pae4AAAAQXRSTlMAgECHYZ94/h7swLwEAblL9/Hfx8e0r6eOfGNZVDcsE/TPe3drUkg8KSYZCwXt6+bm39nTu6ecmo2ETEc8MxMLCQmnFe4AAAFdSURBVEjH7ZTXbsIwFIbtAiUkJOxd9i50793/hLaU7vX+r1IzokCx1WukfBeRfXQ++eiPbObhsYRZXJPRvmVqcpBjqJVwCAq6SmcD2NL3bfsFA/EZ2vaPWOzocSCrdCygzg7ocYgR0QPu6AP3VOm1gVhYoWhBBMtXRE+ic+oI+5XyLA4UFI4PSLMTom98zRx6xiclWB0w1AlEehVxzmBEon182PvgjahTFgNoqgR2zTwtc8pSgE/qGABnCYmz3W8CIVORwCY7kjiJ/mRseQKWs87v0ZjDS6eQBVLyBJrutlOrnV+72y7EELIEgmd8QsutmgU+JQbkJAm4ZJxgS0m4xJdSiGGOoOUXV6CRxALlv06RcwPQxRhpzJOZVqqcR5iE9dmfKx1HHaM6afQDASZQO4KbCx7QdStXZIL/nUU8Z8UdP5DkMlLqR1GLQkmLKSgopQxTovm5jEaJeawOv0IPd8P/1V/7AAAAAElFTkSuQmCC"
+                alt="">
+            <h3>High Quality Selection</h3>
+            <p>Total product quality control for peace of mind</p>
+        </div>
+        <div>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAABIFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADi4uIAAAAAAAAAAAAAAAAAAAAAAADg4OAAAAAAAADh4eEAAAAAAADg4ODg4OAAAAAAAAAAAAAAAAAAAADg4OAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADi4uLf39/f399paWkAAADg4OAAAAAAAADg4OAAAAA7OzsAAADg4OCZmZng4OAUFBQAAAAAAADg4ODg4OAAAADa2toAAAAAAAAAAADk5OQAAADg4OBwcHDExMRPT0+lpaWVlZWLi4s4ODgxMTElJSUJCQkHBwfY2NjLy8u+vr6xsbFbW1s8PDwYGBgODg61tbWpqamDg4NtbW1paWlKSkpISEhFRUUimxvjAAAAQ3RSTlMAgPbwl1/8tqJxQC8fGATi0cTAZ1Q7EAr37uvf2dWrqZyGeXRqSjkxJx758O/o383Jx7Csp6SjjYyMeGpTT0Q0KRoTY8WDigAAAZ5JREFUSMft1NdOG0EUgOHj8a4LMe4loYYO6b33f1gTNwgESM/7v0V2BjsGYTPDHUj8N3u00qcj7YxWrrpUTYaVtXOB3FwKKFT9xWqSo5Z8RX4aVJA2bsKTLMN0LpZPYNaT3ISKxDUUfPAjJVi1Qxre+pECRLpcs+uyfkcCPa31rZokIOFF5uCvjisbsugB6gHwTZs2MvS7m/k4XoQK+KpttRL/U+E4sc5Q6HeKQWNONVvIShaKz3S/a8M7NwPFESSFkgQ81oM2jn3FJLw/TQBDNgciYs88bs+bbRkIXST6fcjhny9mvBGbBXjlIh3oQtPOZbul4iLbEHU50HaNyAysuchBPLVaW3a+LnVQ4iK/gM6utj2UFSg5yc4+sP3Zzs/N+5cOYvrRi439ZG8kDVUnabbbe4Bd80mSkHOSLuz0jsg9WYcpcW+BFhDF41MJ4ZGb7HYAfprxtQSw6CC2LZrf+zf6Pkz4EL0/OMjJFKmGmwybz6fhgZxB2psnu/NiduyfVqGkyugWZGRBMpB8kRFNLcsZ1ROnWlppyFUXv3/1lqnU6lgCKQAAAABJRU5ErkJggg=="
+                alt="">
+            <h3>Affordable Prices</h3>
+            <p>Factory direct prices for maximum savings</p>
+        </div>
+        <div>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAA0lBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEAAAAAAAAAAAAAAAAAAAAtLS0AAAAAAAAAAAAAAAAAAAAAAADf398AAAAAAADg4OAAAAAAAADg4OAAAAAAAADg4ODf39/g4OArKysAAAAdHR0AAAAAAADi4uIAAADf398AAADm5uYAAAAAAADg4OD///9OTk5wcHDX19f+/v5qamr5+fmMjIwkJCQcHBwBAQHa2tpWVlZBQUEWFhbq6urBwcG5ubmnp6eWlpZSUlI4ODgqKiofnaNsAAAALXRSTlMA6vqngF3z8JhyPhMF5bagXtnAhGlEQDco6m78887KvKiioJ2UjFY0LxgYFAh5lWYlAAABTUlEQVRIx+2U126DQBBFFwwu2CbuJb33awhg4pJe/v+XwoiNsoJJBEiRXzgPPNyrsyM0sKKkpCDXtgYWzW7yRrONX2nzTgV/UGEVDRgLljHQZgsAvMFXxZWD3VmC6dFVXPV6Pfvs/DalzBgOqfqme5lFmaoK9GFS4Ygry7KGgz3aUGZFEC0bGGRWRqPRxQ1tqJJVoertHhFaHiUyiDwKYv51Cr1LboXYoLIK3Y/1S0qRGaeEjyDeV4piQmZJRQe8WQCJ+6P0lUwqjSpQbYgu8LBG9HgNF9TfSU7UDNBJqcWfTl0e5TvO3IUknXWVKc19EJ4T4UFFzXZMoTJsAEufan8JHG9FnBqGmhmDiUhQkyc+AzU+k9R1EHqdbkx37jhPn8qvxGWiihhNTCJ5EQS0G0uWXKZOEduQ9IWEz1Q6Gmheh894WqZhmC02KynIF2/ZrSepltS8AAAAAElFTkSuQmCC"
+                alt="">
+            <h3>Express Shiping</h3>
+            <p>Fast, reliable delivery from global warehouses</p>
+        </div>
+        <div>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAABRFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADY2NgAAAAAAAAAAAAAAAAAAADX19cAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADY2NgAAAAAAAAAAAAAAAAAAAAAAAAAAADZ2dnj4+M8PDwcHBwAAAAKCgoAAADY2NgAAAAAAAAAAAAAAAAAAAAAAAAAAADb29sTExPY2NjY2Ng8PDzY2NjY2NgAAADCwsK0tLSTk5PY2NgXFxcMDAw0NDRhYWEAAAAAAADX19fa2trb29uOjo7Z2dk5OTkAAAAAAADY2NjV1dWDg4NCQkLJycm2traIiIhkZGRISEi7u7uwsLCqqqqlpaWSkpKOjo5MTEw3NzcxMTEUFBQKCgrLy8uYmJh7e3tubm5eXl5bW1tTU1MWNtRpAAAAUHRSTlMA7/3qKAj38zIFp39jPeLNv7Khi3dzbGktIQ3m19HAqpduUUU2JBsYFgn+++Xdx8WumnxWSzgTB/n49vbr4t7MxLi2tbGwrqWRjEU4LSgoEZKctREAAAHxSURBVEjH7ZRnU+JQFIZvGiR0WBBpIriKfXct6/be63sAKfa2/f9/35M7yAjGK/mmMz4fMinz5Jz7ntyIG64VM5Fszp9xPwYszvhSPoBJ+TFqATC6n9buAUfzQMjH2nVgdxuAObKSAg6JmsDdUY0cF9khagEYH1EpA/PEdIHkaIYJYJuYFle7LdQ4ZnXlzZIONElyAOhL5fCq6XjPOxMq6ejRIsnW6Y1AsZyuDRuWgT7Hf6hH5xh9tO9DSkSOe6HZaexu0hl+7LQ7zQVZreKhpK0x8uLOnOM+zgw3FuOOo2LM0xB2EDDyYohpg511DycxJ8Y1QPOYqslO0D7nJDaE6Rq28EA+McXkgPF0g+vLd3kh6xvTg8oTkSuwceFHYLNTeEHU2KuTy94+0Tc3F9fwRibzmNrAIQ9n8who02uZpIIw8JcaAE4OuicA9uktcOuyHfyL6l30+Fend5ft5wngJ/FiHsDlN5++BOJKZRHY4ll8EtFsNvpl8iHRcyCgMixAr7/6LJj1KT7MfnyUCAI1hWIDxa+CmeIOl9dcaTYOqBJbBZKusAxJvMoX74GIQllxE12LgwlqYEpVEVannAJCJTBaOJ9PS6mYUv/OkpAY6bwMI2NAMqEePgsZq59gpQCoG3NCiFWsgTvZZ0g64oarz3+BhKcJHpw0wgAAAABJRU5ErkJggg=="
+                alt="">
+            <h3>Worry-free After-sales</h3>
+            <p>Instant access to professional support</p>
+        </div>
+    </div>
+    <!-- ///////////////////////////////////////////////////////////////// -->
+
+    <div class="forBgColor">
+        <div class="subscribe">
+            <div class="sub">
+                <h3>Newslatter</h3>
+                <input type="email" name="email" id="subEmail" placeholder="Enter Email to get 50 Points">
+                <button>Subscribe</button>
+            </div>
+            <div class="socialIcon">
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-pinterest"></a>
+                <a href="#" class="fa fa-tumblr"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+            </div>
+        </div>
+        <!-- //////////////////////////////////////////////////////// -->
+
+        <div class="footer">
+            <div>
+                <h4>Company Information</h4>
+                <a href="#">About Us</a>
+                <a href="#">Top Searches</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Intellectual Property Policy</a>
+                <a href="#">Testimonials</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Report Security Issue</a>
+                <a href="#">Sell on Gearbest</a>
+                <a href="#">Cookies Policy</a>
+                <a href="#">Top Brands</a>
+                <a href="#">Gearbest Official Blog</a>
+            </div>
+            <div>
+                <h4>Customer Service</h4>
+                <a href="#">Shipping Information</a>
+                <a href="#">My Favorites</a>
+                <a href="#">FAQ For Newsletter Subscription</a>
+                <a href="#">My Points</a>
+                <a href="#">Warranty and Return</a>
+                <a href="#">Payment Methods</a>
+                <a href="#">Deposit Expansion</a>
+                <a href="#">FAQ & Support</a>
+                <a href="#">Sitemap</a>
+                <a href="#">Gearbest Wallet Instruction</a>
+                <a href="#">FAQs about COVID-19</a>
+            </div>
+            <div>
+                <h4>Other Business</h4>
+                <a href="#">Partnership Programs</a>
+                <a href="#">Associate Program</a>
+            </div>
+            <div class="appStore">
+                <h4>Download App!</h4>
+                <a href="#">Save $3 with App & New User Only</a>
+                <div class="img">
+                    <img id="img1" src="images/barcode.jpg" alt="">
+                    <img id="img2" src="images/google.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //////////////////////////////////////////////////////////// -->
+
+    <div class="copyright">
+        <p>Copyright © 2020-2022 Quick Deals.com. All Rights Reserved.</p>
+    </div>
+</body>
+
+</html>
+<script src="Scripts/buyNow.js"></script>
